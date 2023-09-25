@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.active\:text-blue-gray-900:active{
+  background-color: #886df9!Important;
+}
+.bg-theme{
+  background-color: #886df9;
+}
+.hover\:bg-blue-gray-50:hover{
+background-color: #886df9!important;
+color:#fff!important;
+}
+.theme-heading{
+  font-size: 30px;
+  color: #886df9;
+}
+.heading{
+  font-size: 32px;
+  font-weight: 600;
+}
+.drop-shadow-md{
+  box-shadow:rgb(209 209 209 / 25%) 0px 1px 1px, rgb(109 109 109 / 13%) 0px 0px 1px 1px;}
+.img-box-md{
+  width: 50px;
+  height: 50px;
+}
+.img-box-sm{
+  
+  height: 30px;
+}
+.img-box-sm img{
+  height: 25px;
+    width: 25px;
+    margin-left: -10px;
+}
+.h-25px{
+  height: 25px;
+}
+@media (min-width: 640px) {
+  .flex-md{
+    display: block;
+    flex-wrap: wrap;
+  }
+   
+ }
+ @media (min-width: 768px) { 
+  .flex-md{
+    display: flex;
+    flex-wrap: wrap;
+  }
+     .side-bar-box{
+      width: 30%;
+  }
+    .main-content-box{
+  width: 70%;
+  height: 35rem;
+    overflow: scroll;
+    }
+  .right-bar-box{
+  width: 100%;
+  }
+ }
+ @media (min-width: 1024px) {
+  .flex-md{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .w-49per{
+    width: 49%;
+  }
+  .flex-md-right-box{display:flex;}
+   
+ }
+ @media (min-width: 1400px) { 
+  .w-49per{
+    width:100%;
+  }
+  .flex-md-right-box{
+    display: block;
+  }
+  .flex-md{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+     .side-bar-box{
+      width: 20%;
+  }
+    .main-content-box{
+  width: 55%;
+  height: auto;
+    }
+  .right-bar-box{
+  width: 25%;
+  }
+}
+@media (min-width: 1536px) {
+  .flex-md{
+  display: flex;
+  flex-wrap: wrap;
+}
+   .side-bar-box{
+    width: 20%;
+}
+  .main-content-box{
+    width: 55%;
+    height: auto;
+    overflow: visible;
+  }
+.right-bar-box{
+  width: 25%;
+}
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width:5px;
+    scrollbar-color: #8f54a0 #fafafa;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #8f54a0;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+  }
+  .shadow-scroll-x {
+    overflow-x: auto;
+  
+    background-color: white;
+    background-image: /* Shadows */ linear-gradient(
+        to right,
+        white 0%,
+        white 50%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      linear-gradient(to left, white 0%, white 50%, rgba(255, 255, 255, 0) 100%),
+      /* Shadow covers */
+        linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(255, 255, 255, 0) 50%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+      linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    background-repeat: no-repeat;
+  
+    background-position: left center, right center, left center, right center;
+    background-size: 10px 100%, 10px 100%, 10px 100%, 10px 100%;
+  
+    /* Opera doesn't support this in the shorthand */
+    background-attachment: local, local, scroll, scroll;
+    -webkit-overflow-scrolling: touch;
+  
+    /* 
+      Progressive enhancement of scrollbar on webkit
+      Use media queries to only use on mobile */
+    &::-webkit-scrollbar {
+      height: 2px;
+      background-color: white;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #8f54a0;
+      border-radius: 3px;
+    }
+  
+    &::-webkit-scrollbar-button {
+      display: none!important;
+    }
+  }
