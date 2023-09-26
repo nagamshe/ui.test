@@ -10,6 +10,7 @@ function App() {
      <Homepage/>
      <Middleba/>
      <Rightbar/>
+     
      </div>
     </ThemeProvider>
 
